@@ -13,6 +13,7 @@ class Navbar extends Component {
         return (
             <nav className="NavbarItems">
                 <h1 className="navbar-logo">Trip-Kar</h1>
+                
                 <div className="menu-icons" onClick={this.handleClick}>
                     <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}></i>
                 </div>
@@ -27,8 +28,11 @@ class Navbar extends Component {
                             </li>
                         )
                     })}
-                    <button>Sign Up</button>
-
+                    <li>
+                        <Link to="/login" className="">
+                            <button>Login / SignUp</button>
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         )

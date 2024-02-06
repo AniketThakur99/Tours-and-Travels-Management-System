@@ -1,0 +1,37 @@
+/* RegisterStyles.css */
+
+.register {
+    margin: 4rem 6rem;
+    color: #2a2a2a;
+  }
+  
+  .register form {
+    padding-top: 3rem;
+    width: 50%;
+    margin: auto;
+  }
+  
+  .register input,
+  .register textarea {
+    height: 3rem;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    border-radius: .3rem;
+    border: 1px solid #2a2a2a;
+  }
+  
+  .register button {
+    display: inline;
+  }
+  
+  @media screen and (max-width: 850px) {
+    .register {
+      margin: 4rem 2rem;
+    }
+  
+    .register form {
+      padding-top: 2rem;
+      width: 90%;
+    }
+  }
+  
