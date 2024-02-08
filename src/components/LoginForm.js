@@ -22,20 +22,20 @@
 
 // const LoginForm = ( {setLoginUser}) => {
 //     const { register, handleSubmit,formState: { errors },} = useForm();
- 
+
 //     const navigate = useNavigate()
 
-   
+
 
 //    const onSubmit = (data) => {
-    
+
 //    // console.log(data);
 //     axios.post("http://localhost:3010/login", data)
 //     .then( res => {
 //         alert(res.data.message)
 //         //console.log(res.data.user);
 //         setLoginUser(res.data.user)
-        
+
 //         navigate("/user")
 //     })
 //   }
@@ -82,7 +82,7 @@
 //             <button className="button" onClick={() => navigate("/register")} >Register</button> 
 //             </form>
 //         </div>
-       
+
 //     )
 // }
 
@@ -103,7 +103,7 @@ const LoginForm = ({ setLoginUser }) => {
   const navigate = useNavigate();
 
   const onSubmit = (data) => {
-    axios.post("http://localhost:3010/login", data)
+    axios.post("http://localhost:8087/studentrestapi/api/login", data)
       .then(res => {
         alert(res.data.message);
         setLoginUser(res.data.user);
@@ -114,7 +114,9 @@ const LoginForm = ({ setLoginUser }) => {
   return (
     <div className="login">
       <form onSubmit={handleSubmit(onSubmit)}>
-       
+        <div>
+          <h1>Login</h1>
+        </div>
 
         <div>
           <label>Email Address</label>

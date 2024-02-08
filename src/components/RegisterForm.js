@@ -5,28 +5,31 @@ import { useNavigate } from "react-router-dom"
 import { useForm } from "react-hook-form";
 
 const RegisterForm = () => {
-    const { register, handleSubmit,formState: { errors },} = useForm();
- 
-    const navigate = useNavigate()
+  const { register, handleSubmit, formState: { errors }, } = useForm();
 
-   
+  const navigate = useNavigate()
 
-   const onSubmit = (data) => {
-    
+
+
+  const onSubmit = (data) => {
+
     console.log(data);
-    axios.post("http://localhost:3010/register", data)
-    .then( res => {
+    axios.post("http://localhost:8087/studentrestapi/api/register", data)
+      .then(res => {
         alert(res.data.message)
         console.log(res);
         navigate("/login")
-    })
+      })
   }
 
-    return (
-        <div className="register">
-            <form onSubmit={handleSubmit(onSubmit)}>
-             <div>
-          <h2>Registration</h2>
+  return (
+    <div className="register">
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div>
+
+        </div>
+        <div>
+          <h1>Registration</h1>
         </div>
 
         <div>
@@ -52,7 +55,7 @@ const RegisterForm = () => {
             placeholder="Enter Your Email"
             {...register("email", {
               required: true,
-              pattern:/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+              pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
             })}
           ></input>
           <p>
@@ -101,14 +104,37 @@ const RegisterForm = () => {
             {errors.password?.type === "maxLength" &&
               "Entered number is more than 12 digits"}
           </p>
+          <div>
+            <label>Address</label>
+            <br />
+            <input
+              type="text"
+              name="address"
+              placeholder="Enter Your Address"
+              {...register("address")}
+            ></input>
+          </div>
+
+          <div>
+            <label>Date of Birth</label>
+            <br />
+            <input
+              type="date"
+              name="dob"
+              {...register("dob")}
+            ></input>
+          </div>
+
         </div>
-            <button className="button" >Register</button>
-            <div>or</div>
-            <button className="button" onClick={() => navigate("/login")} >Login</button> 
-            </form>
-        </div>
-       
-    )
+        <button className="button" >Register1</button>
+        <div>or</div>
+
+
+        <button className="button" onClick={() => navigate("/login")} >Register</button>
+      </form>
+    </div>
+
+  )
 }
 
 export default RegisterForm

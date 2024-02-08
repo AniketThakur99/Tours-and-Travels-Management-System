@@ -1,43 +1,59 @@
 /* LoginFormStyles.css */
 
+/* Base styles */
 .login {
-    margin: 4rem 6rem;
-    color: #2a2a2a;
+  margin: 8rem 15rem;
+  color: #2a2a2a;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .25); /* Add box shadow */
+  background-image: url('../assets/airplane.jpg'); /* Replace 'path_to_your_image.jpg' with the actual path to your image */
+  background-size: cover; /* Ensure the background image covers the entire element */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+}
+
+.login form {
+  padding-top: 3rem;
+  width: 50%;
+  margin: auto;
+}
+
+.login input {
+  height: 3rem;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+  border-radius: .3rem;
+  border: 1px solid #2a2a2a;
+}
+
+.login button {
+  display: inline;
+}
+
+.login label::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 0.5rem;
+}
+
+.login label[for="email"]::before {
+  content: "\f0e0"; /* Email icon */
+}
+
+.login label[for="password"]::before {
+  content: "\f023"; /* Lock icon */
+}
+
+.login button {
+  content: "\f2f6"; /* Sign-in icon */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .login {
+    margin: 8rem 2rem;
   }
-  
+
   .login form {
-    padding-top: 3rem;
-    width: 50%;
-    margin: auto;
+    width: 90%;
   }
-  
-  .login input {
-    height: 3rem;
-    padding: 0 1rem;
-    margin-bottom: 2rem;
-    border-radius: .3rem;
-    border: 1px solid #2a2a2a;
-  }
-  
-  .login button {
-    display: inline;
-  }
-  
-  .login label::before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 0.5rem;
-  }
-  
-  .login label[for="email"]::before {
-    content: "\f0e0"; /* Email icon */
-  }
-  
-  .login label[for="password"]::before {
-    content: "\f023"; /* Lock icon */
-  }
-  
-  .login button::before {
-    content: "\f2f6"; /* Sign-in icon */
-  }
-  
+}

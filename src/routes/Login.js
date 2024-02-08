@@ -8,8 +8,9 @@ function Login(){
     return(
         <>
         <Navbar />
-        <Hero cName="hero-mid" heroImg={AboutImg} title="Login" btnClass="hide"/>
         <LoginForm/>
+        <Footer/>
+
         </>
 
     )
