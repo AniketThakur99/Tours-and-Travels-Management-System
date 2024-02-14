@@ -1,0 +1,257 @@
+/* AllTours.css */
+
+.all-tours-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.all-tours-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.all-tours-list {
+  list-style: none;
+  padding: 0;
+}
+
+.all-tours-item {
+  margin-bottom: 20px;
+}
+
+.all-tours-item div {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.all-tours-item p {
+  margin: 0;
+}
+
+.all-tours-item p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.all-tours-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.all-tours-table {
+  border-collapse: collapse;
+  width: 80%;
+  border: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+.all-tours-table th,
+.all-tours-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.all-tours-table th {
+  background-color: #f2f2f2;
+}
+
+.all-tours-table tr:hover {
+  background-color: #f2f2f2;
+}
+
+.all-tours-table td button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.all-tours-table td button:hover {
+  background-color: #45a049;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.all-tours-container {
+  text-align: center;
+}
+
+.heading {
+  margin-bottom: 20px;
+}
+
+.table-container {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+/* Adjustments for smaller screen sizes */
+@media screen and (max-width: 768px) {
+    .all-tours-container {
+      width: 90%; /* Adjust width for smaller screens */
+      margin: 0 auto; /* Center the container */
+    }
+  
+    .heading {
+      font-size: 24px; /* Decrease font size for heading */
+    }
+  
+    .table-container {
+      overflow-x: auto; /* Allow horizontal scrolling for smaller screens */
+    }
+  
+    .all-tours-table {
+      width: 100%; /* Make the table width 100% */
+    }
+  
+    .modal-content {
+      width: 90%; /* Adjust modal width for smaller screens */
+    }
+  }
+  
+  /* Adjustments for even smaller screen sizes */
+  @media screen and (max-width: 480px) {
+    .heading {
+      font-size: 20px; /* Further decrease font size for smaller screens */
+    }
+  }
+  
+/* AllTours.css */
+
+.all-tours-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 100vh; /* Full viewport height */
+}
+
+.heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  margin-top: 20px;
+}
+
+.all-tours-table {
+  border-collapse: collapse;
+  width: 80%;
+  border: 1px solid #ddd;
+}
+
+.all-tours-table th,
+.all-tours-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.all-tours-table th {
+  background-color: #f2f2f2;
+}
+
+.all-tours-table tr:hover {
+  background-color: #f2f2f2;
+}
+
+.all-tours-table td button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.all-tours-table td button:hover {
+  background-color: #45a049;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Adjustments for smaller screen sizes */
+@media screen and (max-width: 768px) {
+  .table-container {
+    overflow-x: auto; /* Allow horizontal scrolling for smaller screens */
+  }
+
+  .all-tours-table {
+    width: 100%; /* Make the table width 100% */
+  }
+
+  .modal-content {
+    width: 90%; /* Adjust modal width for smaller screens */
+  }
+}

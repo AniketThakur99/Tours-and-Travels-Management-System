@@ -90,7 +90,7 @@ const RegisterForm = () => {
             placeholder="Enter Your Password"
             {...register("password", {
               required: true,
-              pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/,
+              pattern: /^(?=.\d)(?=.[a-z])(?=.*[A-Z]).{6,15}$/,
               minLength: 8,
               maxLength: 12,
             })}
@@ -105,13 +105,35 @@ const RegisterForm = () => {
               "Entered number is more than 12 digits"}
           </p>
           <div>
-            <label>Address</label>
+            <label>Street</label>
             <br />
             <input
               type="text"
-              name="address"
+              name="street"
               placeholder="Enter Your Address"
-              {...register("address")}
+              {...register("street")}
+            ></input>
+          </div>
+
+          <div>
+            <label>City</label>
+            <br />
+            <input
+              type="text"
+              name="city"
+              placeholder="Enter Your Address"
+              {...register("city")}
+            ></input>
+          </div>
+
+          <div>
+            <label>PinCode</label>
+            <br />
+            <input
+              type="text"
+              name="pincode"
+              placeholder="Enter Your Address"
+              {...register("pincode")}
             ></input>
           </div>
 
@@ -126,15 +148,13 @@ const RegisterForm = () => {
           </div>
 
         </div>
-        <button className="button" >Register1</button>
-        <div>or</div>
+        <button className="button" >Register</button>
 
 
-        <button className="button" onClick={() => navigate("/login")} >Register</button>
       </form>
     </div>
 
   )
 }
 
-export default RegisterForm
+export default RegisterForm
