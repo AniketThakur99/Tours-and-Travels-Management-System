@@ -18,7 +18,7 @@ const Tours = () => {
     try {
       // Validate fields
       if (!newTour.heading || !newTour.description || !newTour.price 
-        // || !newTour.image
+      || !newTour.image
         ) {
         throw new Error('Please fill in all fields.');
       }
@@ -33,14 +33,11 @@ const Tours = () => {
       formData.append('description', newTour.description);
       formData.append('price', newTour.price);
       formData.append('image', newTour.image);
-
-      console.log(newTour);
-      // http://localhost:8080/trips
+      console.log(formData)
+      // Make a POST request to the backend with the FormData
       await axios.post('http://localhost:8080/trips', formData, {
         headers: {
-          // 'Content-Type': 'multipart/form-data'
-          'Content-Type': 'application/json'
-
+          'Content-Type': 'multipart/form-data'
         }
       });
 
@@ -73,63 +70,63 @@ const Tours = () => {
 
   return (
     <div>
-    {/* <Navbar/> */}
-    <div className="center-container">
-      <h1>Tours</h1>
-      <h2>Add New Tour</h2>
-      {successMessage && <p className="success-message">{successMessage}</p>}
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
-      <div className="input-container">
-        <label htmlFor="heading">Heading:</label>
-        <input
-          id="heading"
-          type="text"
-          placeholder="Heading"
-          value={newTour.heading}
-          onChange={e => setNewTour({ ...newTour, heading: e.target.value })}
-        />
-      </div>
-      <div className="input-container">
-        <label htmlFor="description">Description:</label>
-        <textarea
-          id="description"
-          placeholder="Description"
-          value={newTour.description}
-          onChange={e => setNewTour({ ...newTour, description: e.target.value })}
-        ></textarea>
-      </div>
-      <div className="input-container">
-        <label htmlFor="price">Price:</label>
-        <input
-          id="price"
-          type="text"
-          placeholder="Price"
-          value={newTour.price}
-          onChange={e => setNewTour({ ...newTour, price: e.target.value })}
-        />
-      </div>
-      <div className="input-container">
-        <label htmlFor="image">Image:</label>
-        <input
-          id="image"
-          type="file"
-          accept="image/*"
-          onChange={handleImageChange}
-        />
-        {imagePreview && <img src={imagePreview} alt="Preview" className="image-preview" />}
-      </div>
-      <button onClick={addTour}>Add Tour</button>
+      {/* <Navbar/> */}
+      <div className="center-container">
+        <h1>Tours</h1>
+        <h2>Add New Tour</h2>
+        {successMessage && <p className="success-message">{successMessage}</p>}
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
+        <div className="input-container">
+          <label htmlFor="heading">Heading:</label>
+          <input
+            id="heading"
+            type="text"
+            placeholder="Heading"
+            value={newTour.heading}
+            onChange={e => setNewTour({ ...newTour, heading: e.target.value })}
+          />
+        </div>
+        <div className="input-container">
+          <label htmlFor="description">Description:</label>
+          <textarea
+            id="description"
+            placeholder="Description"
+            value={newTour.description}
+            onChange={e => setNewTour({ ...newTour, description: e.target.value })}
+          ></textarea>
+        </div>
+        <div className="input-container">
+          <label htmlFor="price">Price:</label>
+          <input
+            id="price"
+            type="text"
+            placeholder="Price"
+            value={newTour.price}
+            onChange={e => setNewTour({ ...newTour, price: e.target.value })}
+          />
+        </div>
+        <div className="input-container">
+          <label htmlFor="image">Image:</label>
+          <input
+            id="image"
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
+          />
+          {imagePreview && <img src={imagePreview} alt="Preview" className="image-preview" />}
+        </div>
+        <button onClick={addTour}>Add Tour</button>
 
-      {/* Button to navigate to AllTours page */}
-      <Link to="/alltours">
-        <button className="all-tours-button">All Tours</button>
-      </Link>
+        {/* Button to navigate to AllTours page */}
+        <Link to="/alltours">
+          <button className="all-tours-button">All Tours</button>
+        </Link>
 
-      {/* Button to navigate to AllUsers page */}
-      <Link to="/allusers">
-        <button className="all-users-button">All Users</button>
-      </Link>
-    </div>
+        {/* Button to navigate to AllUsers page */}
+        <Link to="/allusers">
+          <button className="all-users-button">All Users</button>
+        </Link>
+      </div>
     </div>
   );
 };

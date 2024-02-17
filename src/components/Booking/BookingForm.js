@@ -567,10 +567,12 @@ const BookingForm = () => {
         <div className="col-md-6">
           <div className="booking-details">
             <h4>Reservation Details</h4>
-            <p><strong>Heading:</strong> {booking.heading}</p>
+            <p><strong></strong> {booking.image}</p>
+            <p><strong></strong> {booking.heading}</p>
+            <p><strong></strong> {booking.description}</p>
             <p><strong>Price:</strong> ₹{booking.price} per night</p>
-            <p><strong>Description:</strong> {booking.description}</p>
-            <p><strong>Image:</strong> {booking.image}</p>
+            
+            
           </div>
           <div className="additional-details">
             <h4>What this place offers</h4>
@@ -582,8 +584,8 @@ const BookingForm = () => {
               <li>Air conditioning</li>
               <li>Garden</li>
               <li>Smoking allowed</li>
-              <li>Unavailable: Carbon monoxide alarm</li>
-              <li>Unavailable: Smoke alarm</li>
+              <li> Carbon monoxide alarm</li>
+              <li> Smoke alarm</li>
             </ul>
           </div>
         </div>

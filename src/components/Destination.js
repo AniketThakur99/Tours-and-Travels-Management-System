@@ -12,22 +12,17 @@ const Destination =()=>{
 
         <DestinationData
         className="first-des"
-        heading="Taal Volcano"
-        text="Taal Volcano Tagalog: Bulkang Taal is a large caldera filled by Taal
-        Lake in the Philippines. Located in the province of Batangas about
-        50 kilometers (31 mi) south of Manila, the volcano is the second
-        most active volcano in the country with 38 recorded historical
-        eruptions, all of which were concentrated on Volcano Island, near
-        the middle of Taal Lake. The caldera was formed by prehistoric
-        eruptions between 140,000 and 5,380 BP."
+        heading="Goa"
+        text="Experience the magic of Goa's beaches, culture, and cuisine for an unforgettable getaway. From sun-kissed shores to historic landmarks, there's something for every traveler to enjoy. Indulge in delicious seafood and spicy curries, and dance under the stars to the rhythm of Goa's vibrant nightlife. Make memories that will last a lifetime in this tropical paradise. Goa awaits you with open arms!"
         img1={Mountain1}
-        img2={Mountain1}
+        img2={Mountain2}
         />
 
         <DestinationData
         className="first-des-reverse"
-        heading="Mt.Daguldul"
-        text="Mt. Daguldol is a coastal mountain located in the province of Batangas. It offers a scenic view of nearby Batangas mountains and beaches. Additionally, Mt. Daguldol has an elevation of 672 MASL or 2204 feet. Mt. Daguldol is exactly situated in Sitio Biga, Barangay, Hugom San Juan, Batangas. It is bound between the municipality of San Juan and Lobo. The Lobo municipality is also a highlands, with Mt. Naguiling being the tallest mountain."
+        heading="Manali"
+        text="
+        Discover the allure of Manali amidst the majestic Himalayas, offering thrilling adventures and serene landscapes. Immerse yourself in the rich culture through visits to ancient temples and vibrant markets. Indulge in hearty Himachali cuisine and cozy up by bonfires under the starry sky. Experience the bliss of natural hot springs in Vashisht and unwind amidst the tranquility of this mountain paradise. Manali beckons with its blend of adventure, culture, and scenic beauty"
         img1={Mountain3}
         img2={Mountain4}
         />

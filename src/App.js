@@ -30,12 +30,6 @@ function App() {
       <Route path="/allusers" element={<AllUsers/>} />
 
       </Routes>
-
-      
-
-
-
-
     </div>
   );
 }
