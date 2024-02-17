@@ -18,7 +18,7 @@ const Tours = () => {
     try {
       // Validate fields
       if (!newTour.heading || !newTour.description || !newTour.price 
-      || !newTour.image
+        //|| !newTour.image
         ) {
         throw new Error('Please fill in all fields.');
       }
