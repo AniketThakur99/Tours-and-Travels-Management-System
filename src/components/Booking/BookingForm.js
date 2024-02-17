@@ -468,10 +468,13 @@ import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import './BookingFormStyles.css';
 import Navbar from '../Navbar';
+import { useSelector } from 'react-redux';
 
 const BookingForm = () => {
   const navigate = useNavigate();
   const { id } = useParams();
+
+  //const userId=useSelector(state=> state.id.value)
 
   const [validated, setValidated] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
@@ -529,7 +532,8 @@ const BookingForm = () => {
           checkOutDate: booking.checkOutDate,
           numOfGuests: booking.numOfGuests,
           heading: booking.heading,
-          price: booking.price
+          price: booking.price,
+          userId: 1
         };
         console.log(dataToSend)
         // Send a POST request to the backend API to save the booking details
@@ -567,12 +571,10 @@ const BookingForm = () => {
         <div className="col-md-6">
           <div className="booking-details">
             <h4>Reservation Details</h4>
-            <p><strong></strong> {booking.image}</p>
-            <p><strong></strong> {booking.heading}</p>
-            <p><strong></strong> {booking.description}</p>
+            <p><strong>Heading:</strong> {booking.heading}</p>
             <p><strong>Price:</strong> ₹{booking.price} per night</p>
-            
-            
+            <p><strong>Description:</strong> {booking.description}</p>
+            <p><strong>Image:</strong> {booking.image}</p>
           </div>
           <div className="additional-details">
             <h4>What this place offers</h4>
@@ -584,8 +586,8 @@ const BookingForm = () => {
               <li>Air conditioning</li>
               <li>Garden</li>
               <li>Smoking allowed</li>
-              <li> Carbon monoxide alarm</li>
-              <li> Smoke alarm</li>
+              <li>Unavailable: Carbon monoxide alarm</li>
+              <li>Unavailable: Smoke alarm</li>
             </ul>
           </div>
         </div>
