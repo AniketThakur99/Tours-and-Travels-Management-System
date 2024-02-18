@@ -21,7 +21,7 @@ function ContactForm() {
         e.preventDefault();
 
         // Make a POST request to your backend API endpoint using Axios
-        axios.post('/enquiry', formData)
+        axios.post('http://localhost:8080/enquiry', formData)
             .then(response => {
                 if (response.status === 201) {
                     // Clear form fields
