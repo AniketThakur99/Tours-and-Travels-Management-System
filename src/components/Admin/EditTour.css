@@ -1,0 +1,55 @@
+.mainContainer {
+  margin-top: 170px;
+  margin-bottom: 31px;
+  margin-right: 31px;
+  margin-left: 31px;
+  /* border: 1px solid; */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Heading styling */
+.edit-tour-container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Input and textarea styling */
+.edit-tour-container input,
+.edit-tour-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Button-like link styling */
+.button-like-link {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Button container styling */
+.button-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .edit-tour-container {
+    margin: 10px;
+    padding: 15px;
+  }
+}

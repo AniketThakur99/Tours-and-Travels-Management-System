@@ -1,60 +1,119 @@
-.trip{
+/* Style for the trip section */
+.trip {
     margin: 4rem 6rem;
     color: #2a2a2a;
 }
 
-.trip h1{
+/* Style for the heading within the trip section */
+.trip h1 {
     font-size: 3rem;
 }
 
-.tripcard{
+/* Style for the container of trip cards */
+.tripcard {
     margin-top: 3rem;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
 }
 
-.t-card{
-    width: 32%;
+/* Style for each individual trip card */
+.t-card {
+    width: 30%; /* Adjust width to fit three cards in a row */
+    position: relative;
+    margin-bottom: 2rem;
     text-align: start;
-    box-shadow: 0 5px 25px 2px rgba(0, 0, 0, 0.11) ;
+    box-shadow: 0 5px 25px 2px rgba(0, 0, 0, 0.11);
     border-radius: 7px;
     cursor: pointer;
     padding: 1rem .8rem;
+    text-decoration: none; /* Remove default underlining */
+    display: flex; /* Ensure button alignment with flex */
+    flex-direction: column; /* Arrange elements vertically */
 }
 
-.t-image{
+/* Style for the container of trip images */
+.t-image {
     height: 200px;
     overflow: hidden;
     border-radius: 7px;
 }
 
-.t-image img{
+/* Style for trip images */
+.t-image img {
     width: 100%;
     height: 100%;
     transition: 0.3s ease-in-out;
     border-radius: 7px;
 }
 
-.t-image:hover img{
+/* Hover effect for trip images */
+.t-image:hover img {
     transform: scale(1.3);
 }
 
-.t-card h4{
+/* Style for the heading within each trip card */
+.t-card h4 {
     font-size: 1.3rem;
     padding: .9rem 0 .2rem 0;
+    margin-bottom: 0;
+    color: #2a2a2a; /* Ensure consistent heading color */
 }
 
-@media screen and (max-width:850px) {
-    .trip{
-        margin: 4rem 2rem;
-    }
+/* Style for the description within each trip card */
+.t-card p {
+    margin-top: 0.5rem;
+    color: #2a2a2a; /* Ensure consistent text color */
+}
 
-    .tripcard{
+/* Style for links within trip cards */
+.t-card a {
+    text-decoration: none; /* Remove default underlining */
+}
+
+/* Style for the "Book Now" button */
+.book-now-button {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    width: auto; /* Ensure button width adjusts based on content */
+    z-index: 1; /* Ensure button appears above other elements */
+}
+
+/* Style for the trip description */
+.trip-description {
+    padding: 1rem; /* Add padding to the trip description to avoid overlap */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+    .tripcard {
         flex-direction: column;
+        position: relative; /* Ensure relative positioning for absolute child elements */
     }
 
-    .t-card{
+    .t-card {
         width: 100%;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
+        position: relative; /* Ensure relative positioning for absolute child elements */
+    }
+
+    .book-now-button {
+        position: relative;
+        margin-top: 1rem;
+        right: auto;
+        bottom: auto;
+        width: auto;
+    }
+
+    /* Adjust padding for smaller screens */
+    .trip-description {
+        padding: 0.5rem;
     }
 }

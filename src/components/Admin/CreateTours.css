@@ -1,0 +1,102 @@
+/* Default styles */
+/* body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../../assets/table-top-counter-with-blurred-mountain-peak-well-used-present-promote-products.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+} */
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 170px;
+  margin-bottom: 31px;
+  margin-right: 31px;
+  margin-left: 31px;
+  /* border: 1px solid; */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+input[type="text"],
+textarea {
+  width: 300px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="file"] {
+  margin-top: 5px;
+}
+
+.image-preview {
+  margin-top: 5px;
+  max-width: 300px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%; /* Ensure buttons take full width */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Adjust styles for screens with a maximum width of 600px */
+
+  input[type="text"],
+  textarea {
+    width: 100%;
+  }
+
+  /* Adjust button container for smaller screens */
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Styles for button-like links */
+.button-like-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px; /* Add margin-right for space between links */
+}
+
+.button-like-link:last-child {
+  margin-right: 0; /* Remove margin-right from the last link */
+}
+
+.button-like-link:hover {
+  background-color: #0056b3;
+}

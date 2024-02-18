@@ -1,57 +1,84 @@
-import "./TripStyles.css"
-import Tripdata from "./TripData";
-import Trip1 from "../assets/5.jpg"
-import Trip2 from "../assets/8.jpg"
-import Trip3 from "../assets/6.jpg"
+// import "./TripStyles.css";
+// import TripDataComponent from "./TripData"; // Change the import name here
+// import Trip1 from "../assets/Goa.jpg";
+// import Trip2 from "../assets/Manali.jpg";
+// import Trip3 from "../assets/Kerala_Backwaters.jpg";
+
+// function Trip() {
+//   return (
+//     <div className="trip">
+//       <h1>Recent Trips</h1>
+//       <p>You can discover unique destinations </p>
+//       <div className="tripcard">
+//         <TripDataComponent
+//           image={Trip1}
+//           heading="Trip in Goa"
+//           text="Embark on a coastal odyssey to Goa, where every moment is a celebration of sun, sand, and soulful adventures."
+//           id="1"
+//           price="100" // Example price
+//         />
+//         <TripDataComponent
+//           image={Trip2}
+//           heading="Trip in Manali"
+//           text="Discover the Himalayan haven of Manali, where snow-capped peaks meet serene valleys in a symphony of adventure and tranquility."
+//           id="2"
+//           price="120" // Example price
+//         />
+//         <TripDataComponent
+//           image={Trip3}
+//           heading="Trip in Backwaters Kerala"
+//           text="Navigate the tranquil labyrinth of Kerala's backwaters, where emerald canals weave through lush landscapes, offering a serene voyage into nature's embrace."
+//           id="3"
+//           price="150" // Example price
+//         />
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default Trip;
+
+
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'; 
+import TripDataComponent from './TripData'; 
+import './TripStyles.css';
 
 function Trip() {
-    return (
-        <div className="trip">
-            <h1>Recent Trips</h1>
-            <p>You can discover unique destinations using Google Maps</p>
-            <div className="tripcard">
-                <Tripdata
-                    image={Trip1}
-                    heading="Trip in Indonesia"
-                    text="Explore the breathtaking beauty of Indonesia on your next adventure! 
-                    From the lush jungles of Bali to the stunning beaches of Lombok, 
-                    Indonesia offers a diverse range of experiences for every traveler. 
-                    Immerse yourself in the rich culture and history of Yogyakarta, where ancient 
-                    temples and traditions await. Discover the underwater wonders of Raja Ampat, 
-                    home to some of the most biodiverse marine life on the planet. Whether you're 
-                    seeking adventure, relaxation, or cultural immersion, Indonesia has something 
-                    for everyone to enjoy."
-                />
+  const [trips, setTrips] = useState([]);
 
-                <Tripdata
-                    image={Trip2}
-                    heading="Trip in Malasia"
-                    text="Embark on an unforgettable journey to Malaysia, where vibrant cities, 
-                    stunning landscapes, and diverse cultures await. Discover the bustling
-                    streets of Kuala Lumpur, where modern skyscrapers stand alongside historic 
-                    temples and bustling markets. Immerse yourself in the natural beauty of Borneo,
-                    home to lush rainforests, exotic wildlife, and the majestic Mount Kinabalu.
-                    Relax on the pristine beaches of Langkawi or explore the colonial charm of Penang.
-                    With its rich history, delicious cuisine, and warm hospitality,
-                    Malaysia offers a truly unique and unforgettable travel experience."
-                />
+  useEffect(() => {
+    const fetchTrips = async () => {
+      try {
+        const response = await axios.get('http://localhost:8080/trips'); 
+        setTrips(response.data);
+      } catch (error) {
+        console.error('Error fetching trips:', error);
+      }
+    };
 
-                <Tripdata
-                    image={Trip3}
-                    heading="Trip in Goa"
-                    text="Experience the laid-back charm and vibrant culture of Goa on your next getaway. 
-                    Known for its beautiful beaches, eclectic mix of Portuguese and Indian influences, 
-                    and lively nightlife, Goa is a destination like no other. Relax on the golden sands of 
-                    Calangute or Anjuna Beach, soak up the sun at a beach shack, or explore the historic churches 
-                    and temples that dot the landscape. Indulge in delicious seafood and local cuisine, 
-                    shop for unique handicrafts at the bustling markets, or dance the night away at one of 
-                    the many beach clubs. Whether you're seeking relaxation, adventure, or cultural immersion, 
-                    Goa has something for everyone to enjoy."
-                />
-            </div>
+    fetchTrips();
+  }, []);
 
-        </div>
-    )
+  return (
+    <div className="trip">
+      <h1>Recent Trips</h1>
+      <p>You can discover unique destinations</p>
+      <div className="tripcard">
+        {trips.map(trip => (
+          <TripDataComponent
+            key={trip.id}
+            image={trip.image} 
+            heading={trip.heading}
+            text={trip.description}
+            id={trip.id}
+            price={trip.price}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default Trip;
