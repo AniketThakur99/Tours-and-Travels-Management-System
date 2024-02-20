@@ -1,0 +1,103 @@
+.editTour-mainContainer-admin {
+  background-image: url('../../assets/admin-page-form.jpg');
+  margin:  4rem 10rem;
+  /* border: 1px solid; */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Heading styling */
+.editTour-mainContainer-admin h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Label styling */
+.editTour-mainContainer-admin label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Input and textarea styling */
+.editTour-mainContainer-admin input,
+.editTour-mainContainer-admin textarea {
+  width: calc(25% - 11px); /* 25% of container width minus padding */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Button-like link styling */
+.editTour-button-like-link-admin {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.editTour-button-like-link-admin:hover{
+  background-color: black;
+  color: white;
+}
+
+/* Button container styling */
+.editTour-button-container-admin {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Image preview styling */
+.editTour-preview-image-admin {
+  max-width: 30%;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .editTour-mainContainer-admin input,
+  .editTour-mainContainer-admin textarea {
+    width: calc(50% - 11px); /* 50% of container width minus padding */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .editTour-mainContainer-admin input,
+  .editTour-mainContainer-admin textarea {
+    width: calc(100% - 11px); /* 100% of container width minus padding */
+  }
+}
+
+.success-Message-editTour{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: green;
+}
+
+.error-Message-editTour{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: red;
+}

@@ -1,0 +1,144 @@
+.center-container-admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../../assets/admin-page-form.jpg');
+  margin:  4rem 10rem;
+  /* border: 1px solid; */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.success-message-admin-createTour {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: green;
+}
+
+.error-message-admin-createTour {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: red;
+}
+
+.createTours-container-heading {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.createTours-container-heading input {
+  height: 3rem;
+  padding: 0 1rem;
+  margin-bottom: 10px;
+  border-radius: 0.3rem;
+  border: 1px solid #2a2a2a;
+}
+
+.createTours-container-description {
+  margin-bottom: 20px;
+}
+
+.createTours-container-description textarea {
+  padding: 1rem;
+  margin-bottom: 10px;
+  border-radius: 0.3rem;
+  border: 1px solid #2a2a2a;
+}
+
+.createTour-container-price {
+  margin-bottom: 20px;
+}
+
+.createTour-container-price input {
+  height: 3rem;
+  padding: 0 1rem;
+  margin-bottom: 10px;
+  border-radius: 0.3rem;
+  border: 1px solid #2a2a2a;
+}
+
+label-admin {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+input[type="text-admin"],
+textarea-admin {
+  width: 300px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="file-admin"] {
+  margin-top: 5px;
+}
+
+.image-preview-admin {
+  margin-top: 5px;
+  max-width: 300px;
+}
+
+button-admin {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%; /* Ensure buttons take full width */
+}
+
+.button-container-admin {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Adjust styles for screens with a maximum width of 600px */
+
+  input[type="text-admin"],
+  textarea-admin {
+    width: 100%;
+  }
+  
+  /* Adjust button container for smaller screens */
+  .button-container-admin {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.addTour-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:  white;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px; /* Add margin-right for space between links */
+  margin-top: 2rem;
+}
+
+.addTour-button:hover{
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,205 @@
+/* Base styles for all screen sizes */
+.all-tours-container-admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  background-image: url('../../assets/admin-page-form.jpg');
+  margin:  4rem 10rem;
+  /* border: 1px solid; */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.heading-admin {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.table-container-admin {
+  margin-top: 20px;
+  background-color: white;
+}
+
+.all-tours-table-admin {
+  border-collapse: collapse;
+  width: 80%;
+  border: 1px solid #ddd;
+}
+
+.all-tours-table-admin th,
+.all-tours-table-admin td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.all-tours-table-admin th {
+  background-color: #f2f2f2;
+}
+
+.all-tours-table-admin tr:hover {
+  background-color: #f2f2f2;
+}
+
+.all-tours-table-admin td button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.all-tours-table-admin td button:hover {
+  background-color: #45a049;
+}
+
+.modal-admin {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content-admin {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.close-admin {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-admin:hover,
+.close-admin:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Adjustments for smaller screen sizes */
+@media screen and (max-width: 768px) {
+  .table-container-admin {
+    overflow-x: auto; /* Allow horizontal scrolling for smaller screens */
+  }
+
+  .all-tours-table-admin {
+    width: 100%; /* Make the table width 100% */
+  }
+
+  .modal-content-admin {
+    width: 90%; /* Adjust modal width for smaller screens */
+  }
+}
+
+/* Scroll-to-top link */
+.scroll-to-top-link-admin {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.scroll-to-top-link-admin:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for button-like links */
+.button-like-link-admin {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px; /* Add margin-right for space between links */
+}
+
+.button-like-link-admin:last-child {
+  margin-right: 0; /* Remove margin-right from the last link */
+}
+
+.button-like-link-admin:hover {
+  background-color: black;
+  color: white;
+}
+
+.delete-button-admin{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(255, 0, 0);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.delete-button-admin:hover{
+  background-color: darkred;
+}
+
+.edit-button-admin{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(255, 196, 0);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.edit-button-admin:hover{
+  background-color: darkgoldenrod;
+}
+
+.success-message-allTours{
+  position: fixed;
+  bottom: 65px;
+  right: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: green;
+}
+
+.error-message-allTours{
+  position: fixed;
+  bottom: 65px;
+  right: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: red;
+}

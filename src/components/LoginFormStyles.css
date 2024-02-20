@@ -47,6 +47,10 @@
   content: "\f2f6"; /* Sign-in icon */
 }
 
+.div{
+  margin-bottom: 20px;
+}
+
 /* Responsive styles */
 @media screen and (max-width: 768px) {
   .login {

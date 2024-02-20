@@ -1,0 +1,151 @@
+/* AllTours.css */
+
+/* Styles for the main container */
+.allusers-container-admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../../assets/admin-page-form.jpg');
+  margin:  4rem 10rem;
+  /* border: 1px solid; */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles for headings */
+.allusers-heading-admin {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Styles for buttons */
+.allusers-button-container-admin {
+  margin-bottom: 20px;
+}
+
+.allusers-button-like-link-admin {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.allusers-button-like-link-admin:hover {
+  background-color: black;
+  color: white;
+}
+
+.deleteButton-allUsers{
+  display: inline-block;
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.deleteButton-allUsers:hover{
+  background-color: darkred;
+  color: white;
+}
+
+/* Styles for dropdown menu */
+.allusers-dropdown-container-admin {
+  margin-bottom: 20px;
+}
+
+/* Styles for table */
+.allusers-table-container-admin {
+  overflow-x: auto; /* Add horizontal scroll if needed */
+  background-color: white;
+}
+
+.allusers-table-admin {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.allusers-table-admin th, .allusers-table-admin td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.allusers-table-admin th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Styles for scroll to top link */
+.allusers-scroll-to-top-link-admin {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.allusers-scroll-to-top-link-admin:hover {
+  background-color: #0056b3;
+}
+
+/* Media queries for responsive design */
+@media only screen and (max-width: 768px) {
+  .allusers-container-admin {
+    padding: 10px;
+  }
+
+  .allusers-heading-admin {
+    font-size: 20px;
+  }
+
+  .allusers-button-like-link-admin {
+    padding: 8px 16px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .allusers-container-admin {
+    padding: 5px;
+  }
+
+  .allusers-heading-admin {
+    font-size: 18px;
+  }
+
+  .allusers-button-like-link-admin {
+    padding: 6px 12px;
+  }
+}
+
+.success-message-allUsers{
+  position: fixed;
+  bottom: 65px;
+  right: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: green;
+}
+
+.error-message-allUsers{
+  position: fixed;
+  bottom: 65px;
+  right: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: red;
+}

@@ -2,7 +2,7 @@
 
 /* Base styles */
 .register {
-  margin: 8rem 20rem;
+  margin: 8rem 18rem;
   color: #2a2a2a;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .25); /* Add box shadow */
   background-image: url('../assets/home.jpg'); /* Replace 'path_to_your_image.jpg' with the actual path to your image */
@@ -28,6 +28,20 @@
 
 .register button {
   display: inline;
+}
+
+.label{
+  font-weight: bold;
+  font-style: italic;
+
+}
+
+.error{
+  color: red;
+}
+
+.name{
+  margin-left: 100px;
 }
 
 /* Responsive styles */
